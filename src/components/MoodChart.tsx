@@ -11,15 +11,6 @@ interface MoodChartProps {
 }
 
 export function MoodChart({ data }: MoodChartProps) {
-  // Safety check: handle undefined or empty data array
-  if (!data || data.length === 0) {
-    return (
-      <div className="w-full h-[300px] md:h-[400px] flex items-center justify-center">
-        <p className="text-gray-400">No mood data available</p>
-      </div>
-    );
-  }
-
   return (
     <div className="w-full h-[300px] md:h-[400px]">
       <ResponsiveContainer width="100%" height="100%">

@@ -13,15 +13,6 @@ interface MoodWordCloudProps {
 }
 
 export function MoodWordCloud({ words }: MoodWordCloudProps) {
-  // Safety check: handle undefined or empty words array
-  if (!words || words.length === 0) {
-    return (
-      <div className="w-full h-[300px] md:h-[400px] flex items-center justify-center">
-        <p className="text-gray-400">No mood keywords available</p>
-      </div>
-    );
-  }
-
   const options = {
     rotations: 2,
     rotationAngles: [-90, 0] as [number, number],
